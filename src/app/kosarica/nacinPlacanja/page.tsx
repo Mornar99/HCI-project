@@ -1,4 +1,11 @@
+import SubpageNavbar from "@/components/SubpageNavbar/SubpageNavbar";
+
 const NacinPlacanja = () => {
-  return <div>Način plaćanja</div>;
+  return (
+    <div>
+      <SubpageNavbar />
+      Način plaćanja
+    </div>
+  );
 };
 export default NacinPlacanja;

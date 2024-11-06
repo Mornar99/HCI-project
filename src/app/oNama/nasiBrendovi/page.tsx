@@ -1,4 +1,11 @@
+import SubpageNavbar from "@/components/SubpageNavbar/SubpageNavbar";
+
 const NasiBrendovi = () => {
-  return <div>Naši brendovi</div>;
+  return (
+    <div>
+      <SubpageNavbar />
+      Naši brendovi
+    </div>
+  );
 };
 export default NasiBrendovi;

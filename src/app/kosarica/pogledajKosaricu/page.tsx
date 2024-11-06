@@ -1,4 +1,11 @@
+import SubpageNavbar from "@/components/SubpageNavbar/SubpageNavbar";
+
 const PogledajKosaricu = () => {
-  return <div>Pogledaj kosaricu</div>;
+  return (
+    <div>
+      <SubpageNavbar />
+      Pogledaj kosaricu
+    </div>
+  );
 };
 export default PogledajKosaricu;

@@ -1,4 +1,11 @@
+import SubpageNavbar from "@/components/SubpageNavbar/SubpageNavbar";
+
 const Djeca = () => {
-  return <div>Djeca</div>;
+  return (
+    <div>
+      <SubpageNavbar />
+      Djeca
+    </div>
+  );
 };
 export default Djeca;
