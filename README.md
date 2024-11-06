@@ -24,9 +24,9 @@
 
 ### Semester Assignments
 
-- Link to Assignment 1: [**Assignment 1**]https://fesb-my.sharepoint.com/personal/imaras01_fesb_hr/_layouts/15/stream.aspx?id=%2Fpersonal%2Fimaras01%5Ffesb%5Fhr%2FDocuments%2F2024%2D10%2D22%2018%2D50%2D15%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E468bfcb5%2D644d%2D49ae%2Dac57%2Df589a892f55c <!-- Replace with actual URL -->
-- Link to Assignment 2: [**Assignment 2**]https://cubic-cadmium-33b.notion.site/User-personas-and-information-architecture-f2ce3b9f6b584fcfbbc58e97c4525468 <!-- Replace with actual URL -->
-- Link to Assignment 3: [**Assignment 3**]https://hci-project-imim.vercel.app/ <!-- Replace with actual URL -->
+- Link to Assignment 1: [**Assignment 1**](URL_TO_ASSIGNMENT_1) <!-- Replace with actual URL -->
+- Link to Assignment 2: [**Assignment 2**](URL_TO_ASSIGNMENT_2) <!-- Replace with actual URL -->
+- Link to Assignment 3: [**Assignment 3**](https://hci-project-imim.vercel.app/) <!-- Replace with actual URL -->
 <!-- Add more assignments as necessary -->
 
 ## Project Requirements
