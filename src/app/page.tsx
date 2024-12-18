@@ -19,7 +19,7 @@ const Home = () => {
         }
 
         const data = await response.json();
-        setShoes(data.record); // The 'record' key holds your JSON data
+        setShoes(data.record);
       } catch (err) {
         console.log(err);
       }
@@ -38,3 +38,4 @@ const Home = () => {
   );
 };
 export default Home;
+//TO DO: U LAYOUT.TSX FETCHAT SVE PATIKE I STAVIT IH U CONTEXT TAKO DA SE NE FETCHA VISE PUTA

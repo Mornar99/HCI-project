@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Shoe } from "../../../public/types";
 import style from "./Carousel.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 type CarouselProps = {
   shoes: Shoe[];
@@ -32,14 +33,16 @@ export default function Carousel({ shoes = [] }: CarouselProps) {
       <div className={style.carousel}>
         {visibleShoes.map((shoe) => (
           <div key={shoe.id} className={style.shoeCard}>
-            <h3>{shoe.name}</h3>
-            <Image
-              src={`/shoes_images/${shoe.name.replace(/\s+/g, "")}.jpg`}
-              alt={shoe.name}
-              height={100}
-              width={100}
-            />
-            <p>${shoe.price}</p>
+            <Link href={`/${shoe.id}`}>
+              <h3>{shoe.name}</h3>
+              <Image
+                src={`/shoes_images/${shoe.name.replace(/\s+/g, "")}.jpg`}
+                alt={shoe.name}
+                height={100}
+                width={100}
+              />
+              <p>${shoe.price}</p>
+            </Link>
           </div>
         ))}
       </div>
