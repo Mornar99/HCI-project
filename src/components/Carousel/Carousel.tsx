@@ -34,13 +34,11 @@ export default function Carousel({ shoes }: CarouselProps) {
           <div key={shoe.id} className={style.shoeCard}>
             <h3>{shoe.name}</h3>
             <Image
-              src={require("/public/shoes_images/" +
-                shoe.name.replace(/\s+/g, "") +
-                ".jpg")}
-              alt=""
+              src={`/shoes_images/${shoe.name.replace(/\s+/g, "")}.jpg`}
+              alt={shoe.name}
               height={100}
               width={100}
-            ></Image>
+            />
             <p>${shoe.price}</p>
           </div>
         ))}

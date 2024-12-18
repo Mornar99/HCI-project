@@ -1,7 +1,7 @@
 "use client";
 import Carousel from "@/components/Carousel/Carousel";
 import { useState, useEffect } from "react";
-import fakeShoesData from "../../public/MOCK_DATA.json"; //OVO JE DA NETROSIN API CALLOVE
+//import fakeShoesData from "../../public/MOCK_DATA.json"; //OVO JE DA NETROSIN API CALLOVE
 import { Shoe } from "../../public/types";
 
 const Home = () => {
