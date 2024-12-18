@@ -1,0 +1,40 @@
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  background-color: whitesmoke;
+}
+
+.carousel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.shoeCard {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.shoeCard img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.carouselBtn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.carouselBtn:hover {
+  background-color: #0056b3;
+}
