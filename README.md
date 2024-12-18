@@ -28,6 +28,7 @@
 - Link to Assignment 2: [**Assignment 2**](https://cubic-cadmium-33b.notion.site/User-personas-and-information-architecture-f2ce3b9f6b584fcfbbc58e97c4525468) <!-- Replace with actual URL -->
 - Link to Assignment 3: [**Assignment 3**](https://hci-project-imim.vercel.app/) <!-- Replace with actual URL -->
 - Link to Assignment 4: [**Assignment 4**](https://www.notion.so/High-fidelity-prototype-156c123818418034ad48d1022b0c969b) <!-- Replace with actual URL -->
+- Link to Assignment 4: [**Assignment 5**](https://hci-project-imim.vercel.app/) <!-- Replace with actual URL -->
 <!-- Add more assignments as necessary -->
 
 ## Project Requirements
