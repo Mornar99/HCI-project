@@ -7,7 +7,7 @@ type CarouselProps = {
   shoes: Shoe[];
 };
 
-export default function Carousel({ shoes }: CarouselProps) {
+export default function Carousel({ shoes = [] }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {

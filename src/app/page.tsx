@@ -8,19 +8,11 @@ const Home = () => {
   //const [shoes, setShoes] = useState<Shoe[]>(fakeShoesData);
 
   const [shoes, setShoes] = useState<Shoe[]>([]);
-  const apiKey = process.env.NEXT_PUBLIC_X_ACCESS_KEY || "";
-  console.log(apiKey);
+
   useEffect(() => {
     const fetchShoes = async () => {
       try {
-        const response = await fetch(
-          `https://api.jsonbin.io/v3/b/${process.env.NEXT_PUBLIC_BIN_ID}/latest`,
-          {
-            headers: {
-              "X-Access-Key": "$2a$10$O8utjBoS5V" + apiKey, //read-only access key
-            },
-          }
-        );
+        const response = await fetch("/api/shoes");
 
         if (!response.ok) {
           throw new Error(`Error: ${response.statusText}`);
