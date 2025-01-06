@@ -1,47 +1,13 @@
 "use client";
-import { useState, useEffect } from "react";
-import { Shoe } from "../../../public/types";
 import style from "./page.module.scss";
+import { useParams } from "next/navigation";
+import { useAppContext } from "@/context/AppContext";
 
-const DynamicShoe = ({
-  params: asyncParams,
-}: {
-  params: Promise<{ id: string }>;
-}) => {
-  const [params, setParams] = useState<{ id: string } | null>(null);
-  const [shoe, setShoe] = useState<Shoe>();
-  const [shoes, setShoes] = useState<Shoe[]>();
+const DynamicShoe = () => {
+  const params = useParams();
 
-  useEffect(() => {
-    async function fetchParams() {
-      const resolvedParams = await asyncParams;
-      setParams(resolvedParams);
-    }
-
-    fetchParams();
-  }, [asyncParams]);
-
-  useEffect(() => {
-    const fetchShoes = async () => {
-      try {
-        const response = await fetch("/api/shoes");
-
-        if (!response.ok) {
-          throw new Error(`Error: ${response.statusText}`);
-        }
-
-        const data = await response.json();
-
-        if (data) {
-          setShoes(data);
-        }
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    setShoe(shoes?.find((x) => x.id.toString() === params?.id));
-    fetchShoes();
-  }, [params]);
+  const shoes = useAppContext();
+  const shoe = shoes?.find((x) => x.id.toString() === params?.id);
 
   if (!shoe) {
     return <p>Shoe not found</p>;
