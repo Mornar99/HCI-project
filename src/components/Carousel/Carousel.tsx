@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Shoe } from "../../../public/types";
 import style from "./Carousel.module.scss";
 import Image from "next/image";
@@ -10,25 +10,38 @@ type CarouselProps = {
 
 export default function Carousel({ shoes = [] }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize(); // Check screen size on mount
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? shoes.length - 4 : prevIndex - 1
+      prevIndex === 0 ? shoes.length - (isMobile ? 1 : 4) : prevIndex - 1
     );
   };
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex + 4 >= shoes.length ? 0 : prevIndex + 1
+      prevIndex + (isMobile ? 1 : 4) >= shoes.length ? 0 : prevIndex + 1
     );
   };
 
-  const visibleShoes = shoes.slice(currentIndex, currentIndex + 4);
+  const visibleShoes = isMobile
+    ? shoes.slice(currentIndex, currentIndex + 1)
+    : shoes.slice(currentIndex, currentIndex + 4);
 
   return (
     <div className={style.carouselContainer}>
       <button onClick={handlePrev} className={style.carouselBtn}>
-        Prev
+        &lt;
       </button>
       <div className={style.carousel}>
         {visibleShoes.map((shoe) => (
@@ -47,7 +60,7 @@ export default function Carousel({ shoes = [] }: CarouselProps) {
         ))}
       </div>
       <button onClick={handleNext} className={style.carouselBtn}>
-        Next
+        &gt;
       </button>
     </div>
   );

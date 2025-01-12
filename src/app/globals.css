@@ -12,8 +12,13 @@
 
 html,
 body {
-  max-width: 100vw;
+  max-width: 1200px; /* Maximum width of the content */
+  margin: 0 auto; /* Center the container horizontally */
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
   overflow-x: hidden;
+  min-width: 320px;
 }
 
 body {

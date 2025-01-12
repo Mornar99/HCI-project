@@ -3,38 +3,82 @@
   align-items: center;
   justify-content: space-between;
   margin: 20px 0;
-  background-color: whitesmoke;
 }
 
 .carousel {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(4, 1fr); /* Show 4 shoes at once on desktop */
+  gap: 20px;
   width: 100%;
 }
 
 .shoeCard {
   text-align: center;
-  border: 1px solid #ddd;
-  padding: 10px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
   border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.shoeCard img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+.shoeCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 .carouselBtn {
-  background-color: #007bff;
-  color: white;
+  background: none;
+  color: black;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  font-size: 48px;
   cursor: pointer;
+  padding: 10px;
+  transition: transform 0.2s ease;
 }
 
 .carouselBtn:hover {
-  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .carouselContainer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    min-width: 320px;
+  }
+
+  .carousel {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .shoeCard {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .carouselBtn {
+    position: absolute;
+    top: 30%;
+    font-size: 40px;
+    color: black;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    outline: none;
+  }
+
+  .carouselBtn:first-of-type {
+    left: 10px;
+  }
+
+  .carouselBtn:last-of-type {
+    right: 10px;
+  }
 }

@@ -12,20 +12,23 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <ul className={styles.navList}>
-        <li className={pathname === "/" ? styles.active : ""}>
-          <Link href="/">Home</Link>
-        </li>
-        <li className={pathname === "/katalog" ? styles.active : ""}>
-          <Link href="/katalog">Katalog</Link>
-        </li>
-        <li className={pathname === "/oNama" ? styles.active : ""}>
-          <Link href="/oNama">O nama</Link>
-        </li>
-        <li className={pathname === "/kosarica" ? styles.active : ""}>
-          <Link href="/kosarica">
-            <Image src={ikona} alt="" width={24} height={24} />
-          </Link>
-        </li>
+        <h2 className={styles.logo}>SHOE</h2>
+        <div className={styles.right}>
+          <li className={pathname === "/" ? styles.active : ""}>
+            <Link href="/">Home</Link>
+          </li>
+          <li className={pathname === "/katalog" ? styles.active : ""}>
+            <Link href="/katalog">Katalog</Link>
+          </li>
+          <li className={pathname === "/oNama" ? styles.active : ""}>
+            <Link href="/oNama">O nama</Link>
+          </li>
+          <li className={pathname === "/kosarica" ? styles.active : ""}>
+            <Link href="/kosarica">
+              <Image src={ikona} alt="" width={24} height={24} />
+            </Link>
+          </li>
+        </div>
       </ul>
     </nav>
   );
