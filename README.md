@@ -29,7 +29,7 @@
 - Link to Assignment 3: [**Assignment 3**](https://hci-project-imim.vercel.app/) <!-- Replace with actual URL -->
 - Link to Assignment 4: [**Assignment 4**](https://www.notion.so/High-fidelity-prototype-156c123818418034ad48d1022b0c969b) <!-- Replace with actual URL -->
 - Link to Assignment 5: [**Assignment 5**](https://hci-project-imim.vercel.app/) <!-- Replace with actual URL -->
-- Link to Assignment 6: [**Assignment 6**](https://hci-project-imim.vercel.app/) <!-- Replace with actual URL -->
+- Link to Assignment 6: [**High-fidelity prototype**](https://www.notion.so/High-fidelity-prototype-156c123818418034ad48d1022b0c969b) and [**Deployed version**](https://hci-project-imim.vercel.app/) <!-- Replace with actual URL -->
 <!-- Add more assignments as necessary -->
 
 ## Project Requirements
