@@ -140,7 +140,7 @@
   .container {
     flex-direction: column; /* Stack content vertically */
     padding: 20px;
-    text-align: center;
+    text-align: left;
   }
 
   .textContent {
@@ -163,6 +163,7 @@
 
   .imageContent {
     max-width: 100%;
+    display: none;
   }
 
   .categories,
