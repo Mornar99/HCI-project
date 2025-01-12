@@ -56,7 +56,9 @@ const Home = () => {
           <div className={styles.benefitCard}>
             <span>🔄</span>
             <h3>Easy Returns</h3>
-            <p>Hassle-Free Returns And Full Refunds If You're Not Satisfied.</p>
+            <p>
+              Hassle-Free Returns And Full Refunds If You Are Not Satisfied.
+            </p>
           </div>
           <div className={styles.benefitCard}>
             <span>😊</span>
