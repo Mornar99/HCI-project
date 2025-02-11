@@ -1,0 +1,151 @@
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  padding-top: 0;
+}
+
+.sidebar {
+  width: 250px;
+  height: fit-content;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.label {
+  display: block;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+.label select,
+.label input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: white;
+}
+
+.label select:hover,
+.label input:hover {
+  border-color: #0070f3;
+}
+
+.label input {
+  font-size: 0.95rem;
+  cursor: text;
+}
+
+.priceInputs {
+  display: flex;
+  gap: 10px;
+}
+
+.priceInputs input {
+  width: calc(50% - 5px);
+  text-align: center;
+}
+
+.catalog {
+  flex: 1;
+}
+
+.heading {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.shoeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.shoeCard {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  min-width: 250px;
+  max-width: 290px;
+}
+
+.shoeCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.shoeTitle {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.shoePrice {
+  font-size: 1.1rem;
+  color: #0070f3;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.shoeDetails {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.clearButton {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.clearButton:hover {
+  background-color: #cc0000;
+}
+
+.noResults {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+
+  .shoeGrid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .shoeCard {
+    min-width: 100%;
+  }
+}

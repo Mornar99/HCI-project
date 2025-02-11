@@ -21,7 +21,7 @@ const Home = () => {
             Makes Finding Your Perfect Pair Effortless.
           </p>
           <Link href="/katalog" className={styles.shopNowButton}>
-            Katalog
+            Catalog
           </Link>
         </div>
         <div className={styles.imageContent}>
@@ -34,13 +34,13 @@ const Home = () => {
         <h2>Categories</h2>
         <div className={styles.categories}>
           <Link href="/katalog/muskarci" className={styles.categoryCard}>
-            Muškarci
+            Men
           </Link>
           <Link href="/katalog/zene" className={styles.categoryCard}>
-            Žene
+            Women
           </Link>
           <Link href="/katalog/djeca" className={styles.categoryCard}>
-            Djeca
+            Kids
           </Link>
         </div>
       </div>
