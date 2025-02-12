@@ -1,4 +1,3 @@
-import SubpageNavbar from "@/components/SubpageNavbar/SubpageNavbar";
 import styles from "./page.module.css";
 
 const MissionVision = () => {

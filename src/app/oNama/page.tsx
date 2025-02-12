@@ -12,8 +12,8 @@ const ONama = () => {
           durability, and affordability.
         </p>
         <p>
-          Whether you’re looking for the latest sneaker drops, classic dress
-          shoes, or comfortable everyday wear, we’ve got you covered. Our
+          Whether you are looking for the latest sneaker drops, classic dress
+          shoes, or comfortable everyday wear, we have got you covered. Our
           collection features top brands and exclusive designs, ensuring there's
           something for everyone.
         </p>
