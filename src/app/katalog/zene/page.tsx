@@ -1,10 +1,15 @@
-import SubpageNavbar from "@/components/SubpageNavbar/SubpageNavbar";
+"use client";
+import ShoeCatalogAndFilter from "@/components/ShoeCatalogAndFilter/ShoeCatalogAndFilter";
+import { useAppContext } from "@/context/AppContext";
+import styles from "./page.module.css";
 
 const Zene = () => {
+  const shoes = useAppContext();
+
   return (
     <div>
-      <SubpageNavbar />
-      Zene
+      <h2 className={styles.text}>Women</h2>
+      <ShoeCatalogAndFilter shoes={shoes} />
     </div>
   );
 };

@@ -1,5 +1,4 @@
 "use client";
-//kako bi moga citat pathname
 
 import { usePathname } from "next/navigation";
 import styles from "./SubpageNavbar.module.scss";
@@ -11,14 +10,12 @@ const SubpageNavbar = () => {
   let menuItems;
   if (pathname.startsWith("/katalog")) {
     menuItems = [
-      { name: "Muškarci", path: "/katalog/muskarci" },
-      { name: "Žene", path: "/katalog/zene" },
-      { name: "Djeca", path: "/katalog/djeca" },
+      { name: "Men", path: "/katalog/muskarci" },
+      { name: "Women", path: "/katalog/zene" },
+      { name: "Kids", path: "/katalog/djeca" },
     ];
   } else if (pathname.startsWith("/oNama")) {
     menuItems = [
-      { name: "Naša priča", path: "/oNama/nasaPrica" },
-      { name: "Tim", path: "/oNama/tim" },
       { name: "Naši brendovi", path: "/oNama/nasiBrendovi" },
       { name: "Misija i vizija", path: "/oNama/misijaVizija" },
     ];
@@ -32,21 +29,23 @@ const SubpageNavbar = () => {
   }
 
   return (
-    <div>
-      <nav className={styles.navbar}>
-        <ul className={styles.navList}>
-          {menuItems &&
-            menuItems.map((item) => (
-              <li
-                key={item.path}
-                className={pathname === item.path ? styles.active : ""}
+    <div className={styles.navbar}>
+      <div className={styles.categories}>
+        {menuItems &&
+          menuItems.map((item) => (
+            <Link href={item.path} key={item.path}>
+              <div
+                className={`${styles.categoryCard} ${
+                  pathname === item.path ? styles.active : ""
+                }`}
               >
-                <Link href={item.path}>{item.name}</Link>
-              </li>
-            ))}
-        </ul>
-      </nav>
+                {item.name}
+              </div>
+            </Link>
+          ))}
+      </div>
     </div>
   );
 };
+
 export default SubpageNavbar;

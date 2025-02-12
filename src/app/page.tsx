@@ -9,8 +9,6 @@ import Link from "next/link";
 const Home = () => {
   const shoes = useAppContext();
 
-  console.log(shoes);
-
   return (
     <div>
       <div className={styles.container}>

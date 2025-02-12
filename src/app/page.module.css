@@ -70,7 +70,7 @@
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap; /* Ensures cards wrap on smaller screens */
+  flex-wrap: wrap;
 }
 
 .categoryCard {

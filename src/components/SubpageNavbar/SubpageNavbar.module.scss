@@ -1,42 +1,53 @@
-/* app/components/Menu.module.css */
 .navbar {
-  background-color: #333;
-  width: 200px;
-  height: 50vh; /* Full viewport height */
-  position: fixed; /* Fix it to the left side */
-  bottom: 0;
-  left: 0;
-  padding-top: 2rem; /* Space from the top */
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.categories {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-left: 1rem;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.navList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
-
-.navList li {
-  margin-bottom: 1rem; /* Space between menu items */
-  width: 100%;
-}
-
-.navList li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.1rem;
-  display: block;
-  width: 100%;
-  padding: 0.5rem;
-}
-
-.active a {
-  color: #ff6347;
+.categoryCard {
+  background-color: white;
+  border: 1px solid #ccc; /* Border for each category card */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for each category card */
+  padding: 20px;
+  font-size: 1.2rem;
   font-weight: bold;
-  background-color: #444; /* Highlight active item */
+  border-radius: 5px;
+  flex: 1;
+  max-width: 200px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.categoryCard a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+.categoryCard:hover {
+  background-color: #f0f0f0;
+}
+
+.active {
+  background-color: #ccc;
   border-radius: 4px;
+  font-weight: bold;
+}
+
+/* Mobile version */
+@media (max-width: 768px) {
+  .categories {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .categoryCard {
+    width: 15em;
+  }
 }
