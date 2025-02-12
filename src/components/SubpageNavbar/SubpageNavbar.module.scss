@@ -12,22 +12,27 @@
 
 .categoryCard {
   background-color: white;
-  border: 1px solid #ccc; /* Border for each category card */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for each category card */
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 20px;
   font-size: 1.2rem;
   font-weight: bold;
   border-radius: 5px;
-  flex: 1;
-  max-width: 200px;
   text-align: center;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  max-width: 200px;
+  height: 60px; /* Fixed height */
 }
 
 .categoryCard a {
   color: #333;
   text-decoration: none;
   display: block;
+  width: 100%;
 }
 
 .categoryCard:hover {
@@ -36,7 +41,6 @@
 
 .active {
   background-color: #ccc;
-  border-radius: 4px;
   font-weight: bold;
 }
 
@@ -48,6 +52,6 @@
   }
 
   .categoryCard {
-    width: 15em;
+    width: 200px;
   }
 }

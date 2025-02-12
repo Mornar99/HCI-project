@@ -16,8 +16,8 @@ const SubpageNavbar = () => {
     ];
   } else if (pathname.startsWith("/oNama")) {
     menuItems = [
-      { name: "Naši brendovi", path: "/oNama/nasiBrendovi" },
-      { name: "Misija i vizija", path: "/oNama/misijaVizija" },
+      { name: "Our brands", path: "/oNama/nasiBrendovi" },
+      { name: "Mission and vision", path: "/oNama/misijaVizija" },
     ];
   } else if (pathname.startsWith("/kosarica")) {
     menuItems = [
