@@ -14,8 +14,8 @@ const ONama = () => {
         <p>
           Whether you are looking for the latest sneaker drops, classic dress
           shoes, or comfortable everyday wear, we have got you covered. Our
-          collection features top brands and exclusive designs, ensuring there's
-          something for everyone.
+          collection features top brands and exclusive designs, ensuring there
+          is something for everyone.
         </p>
         <p>
           At our webshop, customer satisfaction is our top priority. We strive
