@@ -32,11 +32,9 @@ const ShoeCatalogAndFilter = ({ shoes = [] }: ShoeCatalogAndFilterProps) => {
       .sort((a, b) => a.price - b.price);
   }, [filters, shoes]);
 
-  //Get dynamic filter options
   const filterOptions = useMemo(() => {
-    const uniqueValues = (key: keyof (typeof shoes)[number]) => [
-      ...new Set(shoes.map((shoe) => shoe[key])),
-    ];
+    const uniqueValues = (key: keyof Shoe) =>
+      Array.from(new Set(filteredShoes.map((shoe) => shoe[key])));
 
     return {
       brands: uniqueValues("brand"),
@@ -46,7 +44,7 @@ const ShoeCatalogAndFilter = ({ shoes = [] }: ShoeCatalogAndFilterProps) => {
       colors: uniqueValues("color"),
       materials: uniqueValues("material"),
     };
-  }, [shoes]);
+  }, [filteredShoes]);
 
   const handleFilterChange = (key: string, value: string) => {
     setFilters((prev) => ({ ...prev, [key]: value }));
