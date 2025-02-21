@@ -9,7 +9,8 @@
 .shoeName {
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .shoeDetails {
@@ -21,8 +22,8 @@
 }
 
 .shoeImage {
-  width: 300px;
-  height: 300px;
+  width: 500px;
+  height: 500px;
   object-fit: cover;
   margin-right: 20px;
   border-radius: 10px;
@@ -51,4 +52,66 @@
   font-size: 1rem;
   line-height: 1.5;
   color: #555;
+}
+
+.addToCartBtn {
+  background-color: #ff4d4d;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 20px;
+}
+
+.addToCartBtn:hover {
+  background-color: #cc0000;
+}
+
+.disabledBtn {
+  background-color: #ccc !important;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .shoeDetails {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .shoeImage {
+    width: 280px;
+    height: 280px;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .shoeInfo {
+    max-width: 100%;
+  }
+
+  .shoeName {
+    font-size: 1.8rem;
+  }
+
+  .shoeBrand,
+  .shoePrice,
+  .shoeSize,
+  .shoeColor,
+  .shoeMaterial {
+    font-size: 1rem;
+  }
+
+  .shoeDescription {
+    font-size: 0.9rem;
+  }
+
+  .addToCartBtn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+  }
 }

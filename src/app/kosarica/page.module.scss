@@ -1,0 +1,140 @@
+.basketPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.basketTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.emptyBasket {
+  font-size: 1.2rem;
+  color: #777;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.basketItems {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.basketItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.basketImage {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.basketInfo {
+  flex-grow: 1;
+  padding: 0 15px;
+}
+
+.basketInfo h2 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.basketInfo p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.removeBtn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.removeBtn:hover {
+  background-color: #cc0000;
+}
+
+.totalSection {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.totalSection h2 {
+  font-size: 1.5rem;
+}
+
+.checkoutBtn {
+  background-color: #28a745;
+  color: white;
+  font-size: 1rem;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.checkoutBtn:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 768px) {
+  .basketItem {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .basketImage {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+  }
+
+  .basketInfo {
+    padding: 0;
+  }
+
+  .removeBtn {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .checkoutBtn {
+    width: 100%;
+  }
+
+  .emptyBasket {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .emptyCart {
+    width: 390px;
+    height: auto;
+    display: block;
+    margin-top: 2em;
+  }
+}

@@ -19,13 +19,6 @@ const SubpageNavbar = () => {
       { name: "Our brands", path: "/oNama/nasiBrendovi" },
       { name: "Mission and vision", path: "/oNama/misijaVizija" },
     ];
-  } else if (pathname.startsWith("/kosarica")) {
-    menuItems = [
-      { name: "Pogledaj košaricu", path: "/kosarica/pogledajKosaricu" },
-      { name: "Detalji dostave", path: "/kosarica/detaljiDostave" },
-      { name: "Način plaćanja", path: "/kosarica/nacinPlacanja" },
-      { name: "Promocije i kuponi", path: "/kosarica/promocijeKuponi" },
-    ];
   }
 
   return (

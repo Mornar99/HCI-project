@@ -2,12 +2,15 @@
 import style from "./page.module.scss";
 import { useParams } from "next/navigation";
 import { useAppContext } from "@/context/AppContext";
+import { useBasketContext } from "@/context/BasketContext";
 
 const DynamicShoe = () => {
   const params = useParams();
-
   const shoes = useAppContext();
+  const { basket, addToBasket } = useBasketContext();
+
   const shoe = shoes?.find((x) => x.id.toString() === params?.id);
+  const isInBasket = basket.some((item) => item.id === shoe?.id);
 
   if (!shoe) {
     return <p>Shoe not found</p>;
@@ -29,9 +32,19 @@ const DynamicShoe = () => {
           <p className={style.shoeColor}>Color: {shoe.color}</p>
           <p className={style.shoeMaterial}>Material: {shoe.material}</p>
           <p className={style.shoeDescription}>{shoe.description}</p>
+          <button
+            onClick={() => addToBasket(shoe)}
+            className={`${style.addToCartBtn} ${
+              isInBasket ? style.disabledBtn : ""
+            }`}
+            disabled={isInBasket}
+          >
+            {isInBasket ? "Already in Basket" : "Add to Basket"}
+          </button>
         </div>
       </div>
     </div>
   );
 };
+
 export default DynamicShoe;

@@ -12,8 +12,8 @@
 
 html,
 body {
-  max-width: 1200px; /* Maximum width of the content */
-  margin: 0 auto; /* Center the container horizontally */
+  max-width: 1200px;
+  margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
   box-sizing: border-box;
@@ -27,6 +27,19 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
 }
 
 * {

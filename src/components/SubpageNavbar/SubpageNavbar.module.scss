@@ -25,7 +25,7 @@
   justify-content: center;
   min-width: 200px;
   max-width: 200px;
-  height: 60px; /* Fixed height */
+  height: 60px;
 }
 
 .categoryCard a {
@@ -44,7 +44,6 @@
   font-weight: bold;
 }
 
-/* Mobile version */
 @media (max-width: 768px) {
   .categories {
     flex-direction: column;
