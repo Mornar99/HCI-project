@@ -46,15 +46,14 @@
 .navList {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 2rem;
   margin: 0;
   padding: 0;
-  flex-wrap: nowrap;
 }
 
 .navList li {
   white-space: nowrap;
-  padding-top: 0.3em;
 }
 
 .navList li a {
@@ -87,9 +86,54 @@
   margin: 0.5rem 0;
 }
 
+.userIcon,
+.userIcon2 {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #ff6347;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.userSection button {
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: black;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+.userSection {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.rightPartNavbar {
+  display: none;
+  gap: 1em;
+}
+
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
+  }
+
+  .rightPartNavbar {
+    display: flex;
+    gap: 1em;
   }
 
   .navList {
@@ -99,5 +143,13 @@
 
   .navList.open {
     display: flex;
+  }
+
+  .userSection {
+    flex-direction: column;
+  }
+
+  .userIcon2 {
+    display: none;
   }
 }
