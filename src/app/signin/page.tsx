@@ -68,7 +68,7 @@ export default function SignInPage() {
           </button>
         </form>
         <p>
-          Don't have an account? <Link href="/signup">Sign up</Link>
+          New here? Create an account. <Link href="/signup">Sign up</Link>
         </p>
       </div>
     </div>
