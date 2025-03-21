@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import styles from "./Navbar.module.scss";
-import ikona from "../../../public/shopping-cart-icon.png";
+import ikona from "../../../public/shopping-cart-icon.jpg";
 import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
 
@@ -65,7 +65,7 @@ const Navbar = () => {
           </li>
           <li className={pathname === "/kosarica" ? styles.active : ""}>
             <Link href="/kosarica" onClick={closeMenu}>
-              <Image src={ikona} alt="Cart" width={24} height={24} />
+              <Image src={ikona} alt="Cart" width={30} height={30} />
             </Link>
           </li>
 
