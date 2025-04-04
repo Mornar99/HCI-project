@@ -58,6 +58,11 @@ const Navbar = () => {
               Catalog
             </Link>
           </li>
+          <li className={pathname === "/news" ? styles.active : ""}>
+            <Link href="/news" onClick={closeMenu}>
+              News
+            </Link>
+          </li>
           <li className={pathname === "/oNama" ? styles.active : ""}>
             <Link href="/oNama" onClick={closeMenu}>
               About us

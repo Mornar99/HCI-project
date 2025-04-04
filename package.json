@@ -12,6 +12,7 @@
     "@neondatabase/serverless": "^0.10.4",
     "better-auth": "^1.2.3",
     "body-parser": "^1.20.3",
+    "contentful": "^11.5.11",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "drizzle-orm": "^0.40.0",
