@@ -8,3 +8,23 @@ export type Shoe = {
   price: number;
   size: number;
 };
+
+export type ContentfulImage = {
+  url: string;
+};
+
+export type NewsPost = {
+  sys: { id: string };
+  title: string;
+  publishedDate: string;
+  content: string;
+  image: ContentfulImage;
+};
+
+export type NewsPostCollectionResponse = {
+  data: {
+    newsPostCollection: {
+      items: NewsPost[];
+    };
+  };
+};

@@ -1,3 +1,5 @@
+import { NewsPost, NewsPostCollectionResponse } from "../../public/types";
+
 const NEWS_GRAPHQL_FIELDS = `
   sys { id }
   title
@@ -11,8 +13,8 @@ const NEWS_GRAPHQL_FIELDS = `
 async function fetchGraphQL(
   query: string,
   preview: boolean = false
-): Promise<any> {
-  return fetch(
+): Promise<NewsPostCollectionResponse> {
+  const response = await fetch(
     `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
     {
       method: "POST",
@@ -26,15 +28,15 @@ async function fetchGraphQL(
       },
       body: JSON.stringify({ query }),
     }
-  ).then((response) => response.json());
+  );
+
+  return response.json();
 }
 
-export async function getNewsPosts(isDraftMode = false) {
+export async function getNewsPosts(isDraftMode = false): Promise<NewsPost[]> {
   const query = `
     query {
-      newsPostCollection(order: publishedDate_DESC, preview: ${
-        isDraftMode ? "true" : "false"
-      }) {
+      newsPostCollection(order: publishedDate_DESC, preview: ${isDraftMode}) {
         items {
           ${NEWS_GRAPHQL_FIELDS}
         }
@@ -42,8 +44,10 @@ export async function getNewsPosts(isDraftMode = false) {
     }
   `;
 
-  const response = await fetchGraphQL(query, isDraftMode);
-  console.log("Contentful Response:", JSON.stringify(response, null, 2)); // Debugging
+  const response: NewsPostCollectionResponse = await fetchGraphQL(
+    query,
+    isDraftMode
+  );
 
-  return response?.data?.newsPostCollection?.items || [];
+  return response.data.newsPostCollection.items;
 }

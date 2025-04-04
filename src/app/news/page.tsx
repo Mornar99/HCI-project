@@ -1,16 +1,17 @@
 import { getNewsPosts } from "@/lib/contentful";
 import styles from "./page.module.scss";
 import Image from "next/image";
+import { NewsPost } from "../../../public/types";
 
 export default async function NewsPage() {
-  const newsPosts = await getNewsPosts();
+  const newsPosts: NewsPost[] = await getNewsPosts();
   console.log(newsPosts);
 
   return (
     <div className={styles.newsContainer}>
       <h1 className={styles.title}>Latest Shoe News</h1>
       <div className={styles.newsGrid}>
-        {newsPosts.map((post: any, index: number) => (
+        {newsPosts.map((post, index: number) => (
           <div key={index} className={styles.newsItem}>
             <Image
               src={post.image?.url}
