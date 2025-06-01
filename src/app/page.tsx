@@ -26,7 +26,7 @@ const Home = () => {
           <Image height={200} src={redShoe} alt="Nike Max Zero"></Image>
         </div>
       </div>
-      <h2>Most Popular Products</h2>
+      <h2 className={styles.mostPopular}>Most Popular Products</h2>
       <Carousel shoes={shoes} />
       <div className={styles.categoriesContainer}>
         <h2>Categories</h2>

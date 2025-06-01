@@ -40,6 +40,14 @@ const Navbar = () => {
             </div>
           )}
 
+          <ul className={styles.kosaricaMobile}>
+            <li className={pathname === "/kosarica" ? styles.active : ""}>
+              <Link href="/kosarica" onClick={closeMenu}>
+                <Image src={ikona} alt="Cart" width={30} height={30} />
+              </Link>
+            </li>
+          </ul>
+
           <button className={styles.hamburger} onClick={toggleMenu}>
             <span className={styles.hamburgerLine}></span>
             <span className={styles.hamburgerLine}></span>
@@ -68,11 +76,6 @@ const Navbar = () => {
               About us
             </Link>
           </li>
-          <li className={pathname === "/kosarica" ? styles.active : ""}>
-            <Link href="/kosarica" onClick={closeMenu}>
-              <Image src={ikona} alt="Cart" width={30} height={30} />
-            </Link>
-          </li>
 
           {isPending ? (
             <li>Loading...</li>
@@ -99,6 +102,16 @@ const Navbar = () => {
                 .toUpperCase()}
             </div>
           )}
+
+          <li
+            className={`${styles.desktopKosarica} ${
+              pathname === "/kosarica" ? styles.active : ""
+            }`}
+          >
+            <Link href="/kosarica" onClick={closeMenu}>
+              <Image src={ikona} alt="Cart" width={30} height={30} />
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
